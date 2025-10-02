@@ -41,9 +41,9 @@ class AddIncomeActivity : AppCompatActivity() {
             finish()
         }
 
-        val conceptToggle = findViewById<TextView>(R.id.conceptToggle)
-        val conceptContainer = findViewById<LinearLayout>(R.id.conceptContainer)
-        val conceptRadioGroup = findViewById<RadioGroup>(R.id.conceptRadioGroup)
+        val conceptToggle = binding.conceptToggle
+        val conceptContainer = binding.conceptContainer
+        val conceptRadioGroup = binding.conceptRadioGroup
 
         // Toggle mostrar/ocultar acordeón
         conceptToggle.setOnClickListener {
