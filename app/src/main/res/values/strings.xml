@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ingresos - GASTU</string>
+
+    <string-array name="estado_options">
+        <item>Activo</item>
+        <item>Inactivo</item>
+    </string-array>
+</resources>

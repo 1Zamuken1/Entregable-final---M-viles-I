@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".UpdateIncomeActivity">
+
+    <!-- Encabezado -->
+    <TextView
+        android:id="@+id/updateIncomeHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Editar ingreso."
+        android:textColor="@color/green"
+        android:textSize="24sp" />
+
+    <!-- Botón guardar -->
+    <ImageView
+        android:id="@+id/updateSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/updateIncomeHeading"
+        android:layout_marginEnd="6dp" />
+
+    <!-- Toggle del concepto -->
+    <TextView
+        android:id="@+id/updateConceptToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Concepto ▼"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:padding="12dp"
+        android:background="@drawable/green_border"
+        android:layout_below="@id/updateIncomeHeading"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Contenedor del acordeón -->
+     <LinearLayout
+        android:id="@+id/updateConceptContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/green_border"
+        android:layout_below="@id/updateConceptToggle"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <RadioGroup
+            android:id="@+id/updateConceptRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/concept1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regalías" />
+
+            <RadioButton
+                android:id="@+id/concept2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bonos" />
+
+            <RadioButton
+                android:id="@+id/concept3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Premios" />
+
+            <RadioButton
+                android:id="@+id/concept4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comisiones" />
+
+            <RadioButton
+                android:id="@+id/concept5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Propinas" />
+
+            <RadioButton
+                android:id="@+id/concept6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intereses" />
+
+            <RadioButton
+                android:id="@+id/concept7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dividendos" />
+
+            <RadioButton
+                android:id="@+id/concept8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reembolsos" />
+
+            <RadioButton
+                android:id="@+id/concept9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donaciones recibidas" />
+
+            <RadioButton
+                android:id="@+id/concept10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ventas ocasionales" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <!-- Descripción -->
+    <EditText
+        android:id="@+id/updateDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:hint="Ingresa la descripción"
+        android:gravity="top"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/green_border"
+        android:layout_below="@+id/updateConceptContainer"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Monto -->
+    <EditText
+        android:id="@+id/updateAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Monto"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/green_border"
+        android:layout_below="@+id/updateDescriptionEditText"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

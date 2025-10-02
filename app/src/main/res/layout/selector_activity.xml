@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/black">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIngresos"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="Ingresos"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.05"
+        android:clipToOutline="true"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        app:cornerRadius="24dp"
+        android:backgroundTint="@color/green"
+        app:iconGravity="textStart"
+        app:rippleColor="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnProyecciones"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="Proyecciones"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.05"
+        android:clipToOutline="true"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        app:cornerRadius="24dp"
+        android:backgroundTint="@color/green"
+        app:iconGravity="textStart"
+        app:rippleColor="@color/white"/>
+
+</LinearLayout>

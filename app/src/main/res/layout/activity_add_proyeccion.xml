@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AddProyeccionActivity">
+
+    <!-- Encabezado -->
+    <TextView
+        android:id="@+id/addProyeccionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Añadir proyección."
+        android:textColor="@color/green"
+        android:textSize="24sp" />
+
+    <!-- Botón guardar -->
+    <ImageView
+        android:id="@+id/saveProyeccionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/addProyeccionHeading"
+        android:layout_marginEnd="6dp" />
+
+    <!-- Toggle del concepto -->
+    <TextView
+        android:id="@+id/conceptToggleProyeccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Concepto ▼"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:padding="12dp"
+        android:background="@drawable/green_border"
+        android:layout_below="@id/addProyeccionHeading"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Contenedor del acordeón -->
+    <LinearLayout
+        android:id="@+id/conceptContainerProyeccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/green_border"
+        android:layout_below="@id/conceptToggleProyeccion"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <RadioGroup
+            android:id="@+id/conceptRadioGroupProyeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/concept1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salario" />
+
+            <RadioButton
+                android:id="@+id/conceptP2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pensión" />
+
+            <RadioButton
+                android:id="@+id/conceptP3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subsidio de transporte" />
+
+            <RadioButton
+                android:id="@+id/conceptP4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subsidio familiar" />
+
+            <RadioButton
+                android:id="@+id/conceptP5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beca / Apoyo educativo" />
+
+            <RadioButton
+                android:id="@+id/conceptP6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrendamiento mensual" />
+
+            <RadioButton
+                android:id="@+id/conceptP7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pago de servicios profesionales" />
+
+            <RadioButton
+                android:id="@+id/conceptP8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aportes de socios" />
+
+            <RadioButton
+                android:id="@+id/conceptP9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Renta por inversiones" />
+
+            <RadioButton
+                android:id="@+id/conceptP10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otros ingresos recurrentes" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- Descripción -->
+    <EditText
+        android:id="@+id/descriptionProyeccionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:hint="Ingresa la descripción"
+        android:gravity="top"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/green_border"
+        android:layout_below="@+id/conceptContainerProyeccion"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Monto -->
+    <EditText
+        android:id="@+id/amountProyeccionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Monto"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/green_border"
+        android:layout_below="@+id/descriptionProyeccionEditText"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Fecha de ingreso -->
+    <EditText
+        android:id="@+id/fechaIngresoEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Fecha de ingreso (dd/mm/aaaa)"
+        android:focusable="false"
+        android:clickable="true"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/green_border"
+        android:layout_below="@+id/amountProyeccionEditText"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Fecha de recordatorio -->
+    <EditText
+        android:id="@+id/fechaRecordatorioEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Fecha de recordatorio (dd/mm/aaaa)"
+        android:focusable="false"
+        android:clickable="true"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/green_border"
+        android:layout_below="@+id/fechaIngresoEditText"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Estado -->
+    <Spinner
+        android:id="@+id/estadoSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fechaRecordatorioEditText"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/green_border"/>
+
+</RelativeLayout>
